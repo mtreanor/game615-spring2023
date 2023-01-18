@@ -54,19 +54,20 @@
     <div class="container pb-5">
       <h2 class="mt-6">Unity</h2>
       <ul>
-        <li>Download and install Unity3d 2018.3</li>
+        <li>Download and install Unity3d 2021.3</li>
         <ul>
       	   <li>Include the "WebGL" package</li>
         </ul>
       	<li>This will take a while and require something like 10 gigabytes of space on your computer</li>
-        <li>Open Unity and create a user name and password</li>
+        <li>Open Unity and register a user name and password</li>
       </ul>
     </div>
     <div class="container pb-5">
       <h2 class="mt-6">Github</h2>
       <ul>
         <li>Go to <a href="http://github.com">github.com</a> and create an account</li>
-        <li>Next, go to <a href="https://education.github.com/">https://education.github.com/</a> and apply for the education pack (this allows you to have features you usually have to pay for). Don't be tempted by all the services/deals they offer you at this point.</li>
+        <li>Add your Github username to the Google Sheet linked on the course Canvas page.</li>
+        <!-- <li>Next, go to <a href="https://education.github.com/">https://education.github.com/</a> and apply for the education pack (this allows you to have features you usually have to pay for). Don't be tempted by all the services/deals they offer you at this point.</li> -->
         <li>Download and install <a href="https://desktop.github.com/">Github Desktop</a></li>
         <li>Log into Github desktop</li>
       </ul>
@@ -86,21 +87,25 @@
         </ul>
         <li>Commit your changes to the repository "locally" by typing a brief summary of what you did in the Summary field (e.g. "Created the repository for game615") and click "Commit to master" (this should be on the bottom left of the window).</li>
         <li>On the top/middle region of the screen, click "Publish repository"</li>
-        <li>Go to github.com/YOUR_USER_NAME/game615-spring2023 and check to see that there is something there!</li>
+        <li>Go to github.com/YOUR_USER_NAME/game615-spring2023 and check to see that there is something there (there should be a file named README.md)</li>
       </ul>
     </div>
     <div class="container pb-5">
-      <h2 class="mt-6">Setting up your class replository for Github</h2>
+      <h2 class="mt-6">Setting up your replository submitting work</h2>
       <ul>
         <li>In you the game615-spring2023 folder on your computer, create a folder called "exercises" (all lower case)</li>
-        <li>Create a Unity project named "exercise1", and make sure it is located inside the "exercises" folder</li>
+        <li>Go to your web browser, log into GitHub.com, and find your "game615-fall2023" repository (click the repositories tab).</li>
+        <li>Click the "Settings" tab (located in the top middle of the window). Then, click the "Pages" button on the left middle of that window. In that window, under the label that says "Branch" there will be a dropdown that reads "None". Select "main" and click the save button.</li>
+        <li>NOTE: If you get something that says "Upgrade or make this repository public to enable Pages", this means that you did not uncheck the box that read "keep it private" when you published your repository. To fix this, you will need to click the "General button" (on the left side of the screen), then scroll down to the bottom of the page where it says "Danger Zone" and click the "Change visibility" button. Follow the steps to make your repository "public", and then try step 10 again.</li>
       </ul>
     </div>
     <div class="container pb-5">
       <h2 class="mt-6">Modifying your .gitignore file</h2>
+      The gitignore file allows you to specify files that you do not want git to track (and submit to github). Unity creates tons of files that you don't need to save. The following instructions make it so we don't upload unnecessary files to github, and thus won't use up all the space we are given for free.
       <ul>
         <li>On your computer, open up the .gitignore file in a plain text editor</li>
-        <li>Delete the lines that say (probably lines 4 and 5):
+        <li>NOTE: The gitignore file is "hidden" which means that your operating system won't show it. Google how to make hidden files visible on your machine permanently, and you will be able to see it in the folder.</li>
+        <li>Delete the lines that say the following:
   <pre>
     [Bb]uild/
     [Bb]uilds/
@@ -111,8 +116,25 @@
     *.apk
     *.unitypackage
   </pre></li>
+  <li>Finally, erase the leading "/" in front of:
+    <pre>
+      /[Ll]ibrary/
+      /[Tt]emp/
+      /[Oo]bj/
+      /[Ll]ogs/
+      /[Uu]ser[Ss]ettings/
+    </pre>
+    So it should look like:
+    <pre>
+      [Ll]ibrary/
+      [Tt]emp/
+      [Oo]bj/
+      [Ll]ogs/
+      [Uu]ser[Ss]ettings/
+    </pre>
+  </li>
         <li>Save the file</li>
-        <li>Finally, open Github Desktop top and commit your changes. Then, you may need to commit changes one more time.</li>
+        <li>Finally, open Github Desktop, commit your changes.</li>
       </ul>
     </div>
     <div class="container pb-5">
@@ -123,7 +145,7 @@
         <ul>
       	   <li>Open the editor settings window. (Edit > Project Settings > Editor)</li>
         </ul>
-      	<li>Make .meta files visible to avoid broken object references.</li>
+      	<li>Make .meta files visible.</li>
         <ul>
           <li>Version Control / Mode: “Visible Meta Files”</li>
         </ul>
