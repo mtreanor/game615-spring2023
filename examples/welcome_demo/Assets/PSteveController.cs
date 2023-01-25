@@ -22,10 +22,5 @@ public class PSteveController : MonoBehaviour
         {
             rb.useGravity = true;
         }
-
-        if (gameObject.transform.position.y < -10)
-        {
-            gameObject.transform.position = startPos;
-        }
     }
 }
