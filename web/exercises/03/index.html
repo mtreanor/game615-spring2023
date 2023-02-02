@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The course website for GAME 615 - Game Development at American University in 2023.">
+    <meta name="author" content="Mike Treanor">
+    <title>GAME 615 - Game Development - American University</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">GAME 615 - Game Development</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../../index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#examples">Examples</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#exercises">Exercises</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#syllabus">Syllabus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    <!-- CONTENT -->
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Exercise 3: Somewhere fun to collect things</h1>
+          <p class="lead">GAME 615 - American University</p>
+      </div>
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Description</h2>
+      <p>
+        Create a fun environment for a 3d model to move around in and collect objects! Below are the exercise
+        requirements:
+        <li>
+          <ol>An "interesting" player should be controllable by the player</ol>
+          <ol>The player should be able to collide with some object, and that object should disappear</ol>
+          <li>
+            <ol>That object should be a prefab</ol>
+            <ol>The object should move or rotate (this will require creating a new script for the object)</ol>
+          </li>
+          <ol>Something about how the player moves should change when the object is collided with</ol>
+          <ol>Use 3d models and colors to make the environment interesting in some way</ol>
+          <ol>Feel free to make neat things happen with Rigidbodies and such</ol>
+        </li>
+        Don't forget to check out the annotated sample project from class
+      </p>
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Getting the Sample Project Loaded into Your Project</h2>
+      <p>
+        To integrate the project into another Unity project, download and import the .unitypackage file located at the "CODE" link below.
+        In your own Unity project, go to Assets > Import Package > Custom Package...
+      </p>
+      <p>
+        Once you do this, all of the assets from the sample project will be loaded
+        into your project. Double click the "scene" file (the one with the Unity logo)
+        to actually open up the sample game.
+      </p>
+    </div>
+
+    <div class="container pb-5">
+      <h2 class="mt-6">Building your Project for the Web</h2>
+      <p>
+        <ul>
+          <li>Open the Build Settings (File > Build Settings...)</li>
+          <li>Click the Add Open Scenes button</li>
+          <li>Select "WebGL" and then click the "Switch Platform" button</li>
+          <li>Remember to <a href="../../setup.html">modify your player settings</a> (disable compression, turn off auto WebGL graphics or whatever if necessary.)</li>
+          <li>Click the "Build" button</li>
+          <li>
+            When it asks you where you want to put your build, create a folder titled "play" in your main repository folder ("game615-spring2023-??").
+            Once you do this, it will take several minutes to build your game.
+          </li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="container pb-5">
+      <h2 class="mt-6">Submission</h2>
+      <p>
+        Turn in this assignment via your properly named GitHub repository. Each submission must be accompanied by a README.md file that contains your name, the name of any collaborators you had, and a link to a playable version of your game (i.e. a WebGL build) inside of a directory named "play" within your repository for the exericse. Also, on collaborations, only one member of the team should have the project in their repository and the rest of the team should be Contributors.
+      </p>
+      <p>
+        Also, as part of your submission process, you must complete <a href="https://forms.gle/gB3P7C6hzg5f9n3k8">this form evaluation of your team members</a>. 
+      </p>
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Sample Code</h2>
+      <a href="https://github.com/mtreanor/game615-spring2023/tree/master/examples/2-1-23" class="btn btn-primary">CODE</a>
+      <a href="http://mtreanor.com/game615-spring2023/examples/2-1-23/play/" class="btn btn-primary">PLAY</a>
+    </div>
+  </body>
+</html>

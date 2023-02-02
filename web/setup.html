@@ -47,7 +47,7 @@
     <div class="container pb-5">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h1 class="mt-5">Setting up your development environment</h1>
+          <h1 class="mt-5">Setting up your development environment for each exercise</h1>
           <p class="lead">GAME 615 Spring 2023 - American University</p>
       </div>
     </div>
@@ -55,8 +55,10 @@
       <h2 class="mt-6">Unity</h2>
       <ul>
         <li>Download and install Unity3d 2021.3.15f1</li>
+        <img width="600px" src="./unityversion.png"/>
         <ul>
       	   <li>Include the "WebGL" package</li>
+           <li>Use Visual Studio (rather than Visual Studio Code)</li>
         </ul>
       	<li>This will take a while and require something like 10 gigabytes of space on your computer</li>
         <li>Open Unity and register a user name and password</li>
@@ -73,12 +75,12 @@
       </ul>
     </div>
     <div class="container pb-5">
-      <h3 class="mt-6">Create your repository for the class</h3>
+      <h3 class="mt-6">Create your repository for the exercise</h3>
       <ul>
         <li>Open Github desktop and log in (you may need to go to Preferences->Accounts)</li>
-      <li>Add a repository for the class</li>
+      <li>Add a repository for the exercise</li>
         <ul>
-        	<li>Name it <i>game615-spring2023</i> (everything is case sensitive, so when I put something in quotes, type it EXACTLY like that)</li>
+        	<li>Name as is specified in the assignment (remember, everything is case sensitive)</li>
         	<li>Make sure the repository is marked as "public"</li>
         	<li>Select "Unity" for Git Ignore</li>
         	<li>For Local Path put it wherever you like to keep your class files on your computer</li>
@@ -87,21 +89,19 @@
         </ul>
         <li>Commit your changes to the repository "locally" by typing a brief summary of what you did in the Summary field (e.g. "Created the repository for game615") and click "Commit to master" (this should be on the bottom left of the window).</li>
         <li>On the top/middle region of the screen, click "Publish repository"</li>
-        <li>Go to github.com/YOUR_USER_NAME/game615-spring2023 and check to see that there is something there (there should be a file named README.md)</li>
       </ul>
     </div>
     <div class="container pb-5">
-      <h2 class="mt-6">Setting up your replository submitting work</h2>
+      <h2 class="mt-6">Setting up your repository for submitting work</h2>
       <ul>
-        <li>In you the game615-spring2023 folder on your computer, create a folder called "exercises" (all lower case)</li>
-        <li>Go to your web browser, log into GitHub.com, and find your "game615-spring2023" repository (click the repositories tab).</li>
+        <li>Go to your web browser, log into Github.com, and find the repository you just created and posted (click the repositories tab).</li>
         <li>Click the "Settings" tab (located in the top middle of the window). Then, click the "Pages" button on the left middle of that window. In that window, under the label that says "Branch" there will be a dropdown that reads "None". Select "main" and click the save button.</li>
-        <li>NOTE: If you get something that says "Upgrade or make this repository public to enable Pages", this means that you did not uncheck the box that read "keep it private" when you published your repository. To fix this, you will need to click the "General button" (on the left side of the screen), then scroll down to the bottom of the page where it says "Danger Zone" and click the "Change visibility" button. Follow the steps to make your repository "public", and then try step 10 again.</li>
+        <li>NOTE: If you get something that says "Upgrade or make this repository public to enable Pages", this means that you did not uncheck the box that read "keep it private" when you published your repository. To fix this, you will need to click the "General button" (on the left side of the screen), then scroll down to the bottom of the page where it says "Danger Zone" and click the "Change visibility" button. Follow the steps to make your repository "public", and then try this step again.</li>
       </ul>
     </div>
     <div class="container pb-5">
       <h2 class="mt-6">Modifying your .gitignore file</h2>
-      The gitignore file allows you to specify files that you do not want git to track (and submit to github). Unity creates tons of files that you don't need to save. The following instructions make it so we don't upload unnecessary files to github, and thus won't use up all the space we are given for free.
+      The gitignore file allows you to specify files that you do not want git to track (and submit to github). Unity creates tons of files that you don't need to save (and actually cannot put on github because they are too big). The following instructions make it so we don't upload unnecessary files to github, and thus won't use up all the space we are given for free.
       <ul>
         <li>On your computer, open up the .gitignore file in a plain text editor</li>
         <li>NOTE: The gitignore file is "hidden" which means that your operating system won't show it. Google how to make hidden files visible on your machine permanently, and you will be able to see it in the folder.</li>
@@ -138,7 +138,7 @@
       </ul>
     </div>
     <div class="container pb-5">
-      <h3 class="mt-6">Preparing your Unity projects for Github</h3>
+      <h3 class="mt-6">Preparing your Unity project for Github</h3>
       <p class="lead">NOTE: You'll need to do this for all of your projects</p>
       <ul>
         <li>With your project open in the Unity editor:</li>
@@ -154,6 +154,24 @@
       		<li>Asset Serialization / Mode: “Force Text”</li>
         </ul>
         <li>Save your changes. (File > Save Project)</li>
+      </ul>
+    </div>
+    <div class="container pb-5">
+      <h3 class="mt-6">Preparing your Unity project to be released on the web</h3>
+      <p class="lead">NOTE: You'll need to do this for all of your projects</p>
+      <ul>
+        <li>With your project open in the Unity editor:</li>
+        <ul>
+      	   <li>Open the build settings window. (File > Build Settings)</li>
+           <li>Select WebGL in the Platform section and then press "Switch Platform"</li>
+           <li>Next, click on the "Player Settings" button on the bottom left</li>
+        </ul>
+      	<li>From within the Player Settings</li>
+        <ul>
+          <li>Uncheck the Auto Graphics API button</li>
+          <li>Under the Publishing Settings section, change the "Compression Format" to disabled</li>
+        </ul>
+        <li>Once you've done this, you can build you project for the web. For most projects, you will build it into a "play" folder within your repository, but see the exercise instructions for details.</li>
       </ul>
     </div>
   </body>
