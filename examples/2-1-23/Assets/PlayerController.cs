@@ -19,6 +19,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Below is an example of how you would check to see if a key was just
+        // pressed. Don't forget that there is also a GetKey, and GetKeyUp.
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    // Do something when the space key was just pressed
+        //}
+
+
         // The following two lines of code create two variables that contain info
         // about the up, down, left and right buttons. hAxis will be -1 if left
         // is pressed, 1 if right is pressed and 0 if nothing is pressed. Same

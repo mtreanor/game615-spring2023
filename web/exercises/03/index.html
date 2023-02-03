@@ -52,23 +52,28 @@
       </div>
     </div>
     <div class="container pb-5">
-      <h2 class="mt-6">Description</h2>
-      <p>
-        Create a fun environment for a 3d model to move around in and collect objects! Below are the exercise
-        requirements:
-        <li>
-          <ol>An "interesting" player should be controllable by the player</ol>
-          <ol>The player should be able to collide with some object, and that object should disappear</ol>
-          <li>
-            <ol>That object should be a prefab</ol>
-            <ol>The object should move or rotate (this will require creating a new script for the object)</ol>
-          </li>
-          <ol>Something about how the player moves should change when the object is collided with</ol>
-          <ol>Use 3d models and colors to make the environment interesting in some way</ol>
-          <ol>Feel free to make neat things happen with Rigidbodies and such</ol>
-        </li>
-        Don't forget to check out the annotated sample project from class
-      </p>
+      <p><strong>This exercise is to be completed with a partner</strong></p>
+      <p>Your github repository should be called <em>game615-spring2023-03</em></p>
+      <h2 id="description">Description</h2>
+      <p>For this exercise, you will create a small game where the player controls some a 3d model that needs to collect one object, and avoid another. For example, a rocket ship might try to collect fuel and avoid asteroids. Or a person might try to &quot;eat&quot; (collect) a sandwich and avoid a bee or something. </p>
+      <p>Something unique must happen when the player collides with each type of object. For example, perhaps the person might grow larger when they collide with the sandwich, and might move slower when they collide with the bee.</p>
+      <p>Finally, your partner and you should challenge yourself to make the game have a win and lose conditions (i.e. a goal). How you choose to design and implement that is up to you, but try to only make use of the sort of thing we have covered in class already. One example might be that the player only has a certain amount of time to collect all of the desirable objects or they are destroyed. Or perhaps the player is always moving forward, but their fuel is constantly depleting, and there is collectable fuel everywhere. The goal of the game might be to survive (not run out of fuel) for a certain amount of time. As a simple thing to try, perhaps you can just say the player wins if they collect a certain number of the good items.</p>
+      <h3 id="implementation-requirements-and-tips">Implementation Requirements and Tips</h3>
+      <ul>
+      <li>Create a prefab for each type of object, and assign them each a unique tag</li>
+      <li>The player and each type of object should make use of an object hierarchy to ensure that the pivot of the object if located at the bottom of it, and that the 3d model is facing down the parent object&#39;s z (blue) axis</li>
+      <li>The player and each object should be a 3d model from <a href="poly.pizza">poly.pizza</a></li>
+      <li>In order to create an effect for collisions with each type of object you should make use of the &quot;CompareTag&quot; function inside of the OnTriggerEnter function (see the example&#39;s &quot;PlayerController.cs&quot; for an example of checking to see if the player collided with a coin)</li>
+      <li>See the example from exercise02 to see an example of how you can use a float variable and Time.deltaTime to figure out how much time has passed.</li>
+      <li>Try your best with the goal thing, but I realize we haven&#39;t really covered enough to communicate that a goal has been met (i.e. no on screen text yet), so it is OK if you just track win/lose conditions in the code.</li>
+      </ul>
+      
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Configuring your project</h2>
+      <p>Name your repository "game615-spring2023-03"</p>
+      <p>Make sure to <a href="../../setup.html">set your Unity and Github projects correctly</a></p>
+      <p>Each </p>
     </div>
     <div class="container pb-5">
       <h2 class="mt-6">Getting the Sample Project Loaded into Your Project</h2>
@@ -93,20 +98,46 @@
           <li>Remember to <a href="../../setup.html">modify your player settings</a> (disable compression, turn off auto WebGL graphics or whatever if necessary.)</li>
           <li>Click the "Build" button</li>
           <li>
-            When it asks you where you want to put your build, create a folder titled "play" in your main repository folder ("game615-spring2023-??").
-            Once you do this, it will take several minutes to build your game.
+            When it asks you where you want to put your build, create a folder titled "play" in your main repository folder ("game615-spring2023-03").
+            Once you do this, it will take several minutes to build your game, and then you can commit and push your build. After five or so minutes it should be playable at:
+
+            http://YOUR_GITHUB_USERNAME.github.io/game615-spring2023-03/play
           </li>
         </ul>
       </p>
+      <!--  
+## Overview
+**This exercise is to be completed with a partner**
+
+Your github repository should be called *game615-spring2023-03*
+
+
+## Description
+For this exercise, you will create a small game where the player controls some a 3d model that needs to collect one object, and avoid another. For example, a rocket ship might try to collect fuel and avoid asteroids. Or a person might try to "eat" (collect) a sandwich and avoid a bee or something. 
+
+Something unique must happen when the player collides with each type of object. For example, perhaps the person might grow larger when they collide with the sandwich, and might move slower when they collide with the bee.
+
+Finally, your partner and you should challenge yourself to make the game have a win and lose conditions (i.e. a goal). How you choose to design and implement that is up to you, but try to only make use of the sort of thing we have covered in class already. One example might be that the player only has a certain amount of time to collect all of the desirable objects or they are destroyed. Or perhaps the player is always moving forward, but their fuel is constantly depleting, and there is collectable fuel everywhere. The goal of the game might be to survive (not run out of fuel) for a certain amount of time. As a simple thing to try, perhaps you can just say the player wins if they collect a certain number of the good items.
+
+### Implementation Requirements and Tips
+- Create a prefab for each type of object, and assign them each a unique tag
+- The player and each type of object should make use of an object hierarchy to ensure that the pivot of the object if located at the bottom of it, and that the 3d model is facing down the parent object's z (blue) axis
+- The player and each object should be a 3d model from [poly.pizza](poly.pizza)
+- In order to create an effect for collisions with each type of object you should make use of the "CompareTag" function inside of the OnTriggerEnter function (see the example's "PlayerController.cs" for an example of checking to see if the player collided with a coin)
+- See the example from exercise02 to see an example of how you can use a float variable and Time.deltaTime to figure out how much time has passed.
+- Try your best with the goal thing, but I realize we haven't really covered enough to communicate that a goal has been met (i.e. no on screen text yet), so it is OK if you just track win/lose conditions in the code.
+
+
+      -->
     </div>
 
     <div class="container pb-5">
       <h2 class="mt-6">Submission</h2>
       <p>
-        Turn in this assignment via your properly named GitHub repository. Each submission must be accompanied by a README.md file that contains your name, the name of any collaborators you had, and a link to a playable version of your game (i.e. a WebGL build) inside of a directory named "play" within your repository for the exericse. Also, on collaborations, only one member of the team should have the project in their repository and the rest of the team should be Contributors.
+        Turn in this assignment via your properly named GitHub repository. <b>Each submission must be accompanied by a README.md file</b> that contains your name, the name of your collaborators, and a <a href="https://anvilproject.org/guides/content/creating-links">link to a playable version of your game</a> (i.e. a WebGL build).
       </p>
       <p>
-        Also, as part of your submission process, you must complete <a href="https://forms.gle/gB3P7C6hzg5f9n3k8">this form evaluation of your team members</a>. 
+        Also, as part of your submission process, you must complete <a href="https://forms.gle/gB3P7C6hzg5f9n3k8">this form</a>.
       </p>
     </div>
     <div class="container pb-5">
