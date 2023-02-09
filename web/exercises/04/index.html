@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The course website for GAME 615 - Game Development at American University in 2023.">
+    <meta name="author" content="Mike Treanor">
+    <title>GAME 615 - Game Development - American University</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">GAME 615 - Game Development</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../../index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#examples">Examples</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#exercises">Exercises</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#syllabus">Syllabus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    <!-- CONTENT -->
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Exercise 4: Simple Flight Simulator</h1>
+          <p class="lead">GAME 615 - American University</p>
+      </div>
+    </div>
+    <div class="container pb-5">
+      <p><strong>This exercise is to be completed with a partner</strong></p>
+      <p>Your github repository should be called <em>game615-spring2023-04</em></p>
+      <h2 id="description">Description</h2>
+      <p>Create a very basic flight simulator where the player attempts to collect objects spread around the sky. The number of items that have been collected should be displayed on the screen. To create a simple simulation of flight, your &quot;plane&quot; should simply move forward and rotate using the arrow keys. In addition to the plane movement and collection, you need to <strong>complete at least two of the following challenges</strong>. <em>Make note of which challenges you completed inside of your README.md file.</em></p>
+      <h3 id="challenges">Challenges</h3>
+      <ul>
+      <li>Display a timer on the screen. If the player fails to collect all the collectable items before it reaches zero, destroy the player and display a &quot;You Lose&quot; message of some sort.</li>
+      <li>Make it so the plane can create and launch items forward towards some target (i.e. it can shoot stuff). Something should happen when the launched item collides with the other object (e.g. score should increase or something).</li>
+      <li>Make the plane always be slowing down, and have the speed pick up when it collides with one of the collectable items. This can be done by making the speed variable always be decreasing a small amount in Update, and then increase it when the player collides with the item.</li>
+      <li>Enhance the realism by making it so the plane increases in speed when facing downwards and decreases when facing upward. Hint: how much the plane is facing up or down can be determined by the y value of the forward vector.</li>
+      <li>Make it so the plane will crash if it runs into anything other than the collectable items. When the plane crashes, it should return to its starting position.</li>
+      </ul>
+      <h3 id="note">NOTE</h3>
+      <ul>
+      <li>I&#39;ve found that the Rotate function should be called with the &quot;Space.self&quot; option, and the Translate function should be called with the &quot;Space.world&quot; function. See the example to see this in action.</li>
+      </ul>
+      
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Configuring your project</h2>
+      <p>Name your repository "game615-spring2023-04"</p>
+      <p>Make sure to <a href="../../setup.html">set your Unity and Github projects correctly</a></p>
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Getting the Sample Project Loaded into Your Project</h2>
+      <p>
+        To integrate the project into another Unity project, download and import the .unitypackage file located at the "CODE" link below.
+        In your own Unity project, go to Assets > Import Package > Custom Package...
+      </p>
+      <p>
+        Once you do this, all of the assets from the sample project will be loaded
+        into your project. Double click the "scene" file (the one with the Unity logo)
+        to actually open up the sample game.
+      </p>
+    </div>
+
+    <div class="container pb-5">
+      <h2 class="mt-6">Building your Project for the Web</h2>
+      <p>
+        <ul>
+          <li>Open the Build Settings (File > Build Settings...)</li>
+          <li>Click the Add Open Scenes button</li>
+          <li>Select "WebGL" and then click the "Switch Platform" button</li>
+          <li>Remember to <a href="../../setup.html">modify your player settings</a> (disable compression, turn off auto WebGL graphics or whatever if necessary.)</li>
+          <li>Click the "Build" button</li>
+          <li>
+            When it asks you where you want to put your build, create a folder titled "play" in your main repository folder ("game615-spring2023-04").
+            Once you do this, it will take several minutes to build your game, and then you can commit and push your build. After five or so minutes it should be playable at:
+
+            http://YOUR_GITHUB_USERNAME.github.io/game615-spring2023-04/play
+          </li>
+        </ul>
+      </p>
+      <!--  
+**This exercise is to be completed with a partner**
+
+Your github repository should be called *game615-spring2023-04*
+
+
+## Description
+Create a very basic flight simulator where the player attempts to collect objects spread around the sky. The number of items that have been collected should be displayed on the screen. To create a simple simulation of flight, your "plane" should simply move forward and rotate using the arrow keys. In addition to the plane movement and collection, you need to **complete at least two of the following challenges**. *Make note of which challenges you completed inside of your README.md file.*
+
+### Challenges
+- Display a timer on the screen. If the player fails to collect all the collectable items before it reaches zero, destroy the player and display a "You Lose" message of some sort.
+- Make it so the plane can create and launch items forward towards some target (i.e. it can shoot stuff). Something should happen when the launched item collides with the other object (e.g. score should increase or something).
+- Make the plane always be slowing down, and have the speed pick up when it collides with one of the collectable items. This can be done by making the speed variable always be decreasing a small amount in Update, and then increase it when the player collides with the item.
+- Enhance the realism by making it so the plane increases in speed when facing downwards and decreases when facing upward. Hint: how much the plane is facing up or down can be determined by the y value of the forward vector.
+- Make it so the plane will crash if it runs into anything other than the collectable items. When the plane crashes, it should return to its starting position.
+
+### NOTE
+- I've found that the Rotate function should be called with the "Space.self" option, and the Translate function should be called with the "Space.world" function. See the example to see this in action.
+
+      -->
+    </div>
+
+    <div class="container pb-5">
+      <h2 class="mt-6">Submission</h2>
+      <p>
+        Turn in this assignment via your properly named GitHub repository. <b>Each submission must be accompanied by a README.md file</b> that contains your name, the name of your collaborators, and a <a href="https://anvilproject.org/guides/content/creating-links">link to a playable version of your game</a> (i.e. a WebGL build). Also include any other information you think may be relevant (e.g. how to play if it isn't obvious). Also, don't forget to note which challenges you completed.
+      </p>
+      <p>
+        Also, as part of your submission process, you must complete <a href="https://forms.gle/gB3P7C6hzg5f9n3k8">this form</a>. In the form there is a place to link your repository - this is where I will look to see your submission.
+      </p>
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Sample Code</h2>
+      <a href="https://github.com/mtreanor/game615-spring2023/tree/master/examples/2-8-23" class="btn btn-primary">CODE</a>
+      <a href="http://mtreanor.com/game615-spring2023/examples/2-8-23/play/" class="btn btn-primary">PLAY</a>
+    </div>
+  </body>
+</html>
