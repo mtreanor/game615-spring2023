@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The course website for GAME 615 - Game Development at American University in 2023.">
+    <meta name="author" content="Mike Treanor">
+    <title>GAME 615 - Game Development - American University</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">GAME 615 - Game Development</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../../index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#examples">Examples</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#exercises">Exercises</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#syllabus">Syllabus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    <!-- CONTENT -->
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Exercise 5: Collect Stuff Inside a Building!</h1>
+          <p class="lead">GAME 615 - American University</p>
+      </div>
+    </div>
+    <div class="container pb-5">
+      <h1 id="description">Description</h1>
+      <p>The following exercise is designed to give you practice using a handful of tools for creating more immersive worlds: Terrains, ProBuilder, Player Controller Starter Assets, and Particle Effects. It is to be completed with a partner and rour github repository should be called <em>game615-spring2023-05</em>.</p>
+      <p>Create a simple game where the player searches a building&#39;s interior for a number of items to collect. Outside of the building is a mountain range that you can see through several &quot;windows&quot;.</p>
+      <h2 id="requirements">Requirements</h2>
+      <ol>
+      <li>Use either the first of third person starter asset from the Unity Asset Store.</li>
+      <li>When the collectable is collected, a particle effect should be instantiated where the collision happened (i.e. instantiate a prefab of a particle effect that is destroyed after a short amount of time)</li>
+      <li>Use point lights to customize the lighting of the interior</li>
+      <li>The number of items collected should be displayed on the screen (<a href="https://www.dafont.com">with a custom font</a>)</li>
+      <li>The walls of the interior should have some color applied to them (using ProBuilder Vertex Colors)</li>
+      <li>There needs to be at least one stair case that leads to a higher level in your building</li>
+      <li>There needs to be windows on some of the walls where you can see the mountain range outside (created with a textured terrain). In order to create windows, you will need to cut the walls, and delete faces in the shape you want the windows to be in.</li>
+      </ol>
+      <h2 id="-optional-challenge">(optional) Challenge</h2>
+      <p>Create a <strong>jump scare</strong> where the player collides with an unseen trigger, and something starts moving forward (presumably toward the player at the time of collision). </p>
+      <p><strong>Hint: </strong> you can have the scary thing have an if statement wrapped around the &quot;move forward&quot; code within its Update function. The condition of the if statement can be a bool variable initially set to false. In the OnTriggerEnter function, you can set the variable to true.</p>
+      <h1 id="potentially-useful-notes">Potentially Useful Notes</h1>
+      <h2 id="terrains">Terrains</h2>
+      <ul>
+      <li>Create a terrain</li>
+      <li>Raise and lower (using the tools)</li>
+      <li>Texturing:<ul>
+      <li>Get the texture pack from Unity&#39;s Asset store &quot;Outdoor Ground Textures&quot;<ul>
+      <li>Remember to sign in</li>
+      </ul>
+      </li>
+      <li>Load it using Package Manager&#39;s &quot;My Assets&quot;</li>
+      <li>Paint Texture by adding Terrain Layers (and assigning Textures form the Outdoor Ground Texture package)</li>
+      <li>Add Normal maps to the layers (these are also from the Outdoor Ground Texture package)</li>
+      </ul>
+      </li>
+      </ul>
+      <h2 id="probuilder">ProBuilder</h2>
+      <ul>
+      <li>Get it the Package Manager&#39;s &quot;Unity Registry&quot;</li>
+      <li>Getting and positioning the ProBuilder tool window (Tools-&gt;ProBuilder-&gt;ProBuilder Window)</li>
+      <li>Basics of 3d models: vertices, edges, faces, normals</li>
+      <li>Creating and modifying ProBuilder shapes</li>
+      <li>Modeling techniques<ul>
+      <li>Bevel</li>
+      <li>Extrude</li>
+      <li>Cutting faces with the cut tool</li>
+      <li>Many others</li>
+      </ul>
+      </li>
+      <li>Creating a room by creating a shaped and flipping normals</li>
+      <li>Coloring faces (or individual vertices) with vertex coloring</li>
+      <li>Creating a custom material to make it so it doesn&#39;t have the measurement texture (create a material, select the ProBuilder shader, and assign it like a regular material)</li>
+      </ul>
+      <h2 id="starter-assets">Starter Assets</h2>
+      <ul>
+      <li>Get it from the Asset Store (search starter assets)</li>
+      <li>Choose either first person and third person</li>
+      <li>When you import, it will ask you if you want to switch to yhe &quot;new&quot; input system - say OK.</li>
+      <li>Add the NestedParent_Unpack, and unpack, and position the PlayerCapsule<ul>
+      <li>Delete the UI/event stuff</li>
+      </ul>
+      </li>
+      <li>Delete the original Main Camera</li>
+      <li>Read the manual for more details</li>
+      </ul>
+      <h2 id="particle-effects">Particle Effects</h2>
+      <ul>
+      <li>Create an empty game object</li>
+      <li>Add the &quot;Particle System&quot; component to it</li>
+      <li>Download <a href="https://catlikecoding.com/unity/tutorials/custom-srp/particles/unlit-particles/particles-single.png">this image</a>, and add it to the assets folder in your project</li>
+      <li>To make it so the magenta square is replaced with a more usable shape, create a material, select the correct shader (Particle-&gt;Standard Unlit), and assign the following image to the materials &quot;Albedo&quot;</li>
+      <li>Apply the material to the Particle System by expanding the Renderer area of the inspector for the Particle System, and drag the material into the Material slot</li>
+      </ul>
+      
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Configuring your project</h2>
+      <p>Name your repository "game615-spring2023-05"</p>
+      <p>Make sure to <a href="../../setup.html">set your Unity and Github projects correctly</a></p>
+    </div>
+
+
+    <div class="container pb-5">
+      <h2 class="mt-6">Building your Project for the Web</h2>
+      <p>
+        <ul>
+          <li>Open the Build Settings (File > Build Settings...)</li>
+          <li>Click the Add Open Scenes button</li>
+          <li>Select "WebGL" and then click the "Switch Platform" button</li>
+          <li>Remember to <a href="../../setup.html">modify your player settings</a> (disable compression, turn off auto WebGL graphics or whatever if necessary.)</li>
+          <li>Click the "Build" button</li>
+          <li>
+            When it asks you where you want to put your build, create a folder titled "play" in your main repository folder ("game615-spring2023-05").
+            Once you do this, it will take several minutes to build your game, and then you can commit and push your build. After five or so minutes it should be playable at:
+
+            http://YOUR_GITHUB_USERNAME.github.io/game615-spring2023-05/play
+          </li>
+        </ul>
+      </p>
+      <!--  
+# Description
+The following exercise is designed to give you practice using a handful of tools for creating more immersive worlds: Terrains, ProBuilder, Player Controller Starter Assets, and Particle Effects. It is to be completed with a partner and rour github repository should be called *game615-spring2023-05*.
+
+Create a simple game where the player searches a building's interior for a number of items to collect. Outside of the building is a mountain range that you can see through several "windows".
+
+## Requirements
+1. Use either the first of third person starter asset from the Unity Asset Store.
+1. When the collectable is collected, a particle effect should be instantiated where the collision happened (i.e. instantiate a prefab of a particle effect that is destroyed after a short amount of time)
+1. Use point lights to customize the lighting of the interior
+1. The number of items collected should be displayed on the screen ([with a custom font](https://www.dafont.com))
+1. The walls of the interior should have some color applied to them (using ProBuilder Vertex Colors)
+1. There needs to be at least one stair case that leads to a higher level in your building
+1. There needs to be windows on some of the walls where you can see the mountain range outside (created with a textured terrain). In order to create windows, you will need to cut the walls, and delete faces in the shape you want the windows to be in.
+
+## (optional) Challenge
+Create a **jump scare** where the player collides with an unseen trigger, and something starts moving forward (presumably toward the player at the time of collision). 
+
+**Hint: ** you can have the scary thing have an if statement wrapped around the "move forward" code within its Update function. The condition of the if statement can be a bool variable initially set to false. In the OnTriggerEnter function, you can set the variable to true.
+
+
+# Potentially Useful Notes
+## Terrains
+* Create a terrain
+* Raise and lower (using the tools)
+* Texturing:
+    * Get the texture pack from Unity's Asset store "Outdoor Ground Textures"
+        * Remember to sign in
+    * Load it using Package Manager's "My Assets"
+    * Paint Texture by adding Terrain Layers (and assigning Textures form the Outdoor Ground Texture package)
+    * Add Normal maps to the layers (these are also from the Outdoor Ground Texture package)
+
+## ProBuilder
+* Get it the Package Manager's "Unity Registry"
+* Getting and positioning the ProBuilder tool window (Tools->ProBuilder->ProBuilder Window)
+* Basics of 3d models: vertices, edges, faces, normals
+* Creating and modifying ProBuilder shapes
+* Modeling techniques
+    * Bevel
+    * Extrude
+    * Cutting faces with the cut tool
+    * Many others
+* Creating a room by creating a shaped and flipping normals
+* Coloring faces (or individual vertices) with vertex coloring
+* Creating a custom material to make it so it doesn't have the measurement texture (create a material, select the ProBuilder shader, and assign it like a regular material)
+
+## Starter Assets
+* Get it from the Asset Store (search starter assets)
+* Choose either first person and third person
+* When you import, it will ask you if you want to switch to yhe "new" input system - say OK.
+* Add the NestedParent_Unpack, and unpack, and position the PlayerCapsule
+    * Delete the UI/event stuff
+* Delete the original Main Camera
+* Read the manual for more details
+
+## Particle Effects
+* Create an empty game object
+* Add the "Particle System" component to it
+* Download [this image](https://catlikecoding.com/unity/tutorials/custom-srp/particles/unlit-particles/particles-single.png), and add it to the assets folder in your project
+* To make it so the magenta square is replaced with a more usable shape, create a material, select the correct shader (Particle->Standard Unlit), and assign the following image to the materials "Albedo"
+* Apply the material to the Particle System by expanding the Renderer area of the inspector for the Particle System, and drag the material into the Material slot
+      -->
+    </div>
+
+    <div class="container pb-5">
+      <h2 class="mt-6">Submission</h2>
+      <p>
+        Turn in this assignment via your properly named GitHub repository. <b>Each submission must be accompanied by a README.md file</b> that contains your name, the name of your collaborators, and a <a href="https://anvilproject.org/guides/content/creating-links">link to a playable version of your game</a> (i.e. a WebGL build). Also include any other information you think may be relevant (e.g. how to play if it isn't obvious). Also, don't forget to note which challenges you completed.
+      </p>
+      <p>
+        Also, as part of your submission process, you must complete <a href="https://forms.gle/gB3P7C6hzg5f9n3k8">this form</a>. In the form there is a place to link your repository - this is where I will look to see your submission.
+      </p>
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Sample Code</h2>
+      <a href="https://github.com/mtreanor/game615-spring2023/tree/master/examples/2-15-23" class="btn btn-primary">CODE</a>
+      <a href="http://mtreanor.com/game615-spring2023/examples/2-15-23/play/" class="btn btn-primary">PLAY</a>
+    </div>
+  </body>
+</html>
