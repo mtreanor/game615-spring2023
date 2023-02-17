@@ -55,7 +55,7 @@
       <h2 class="mt-6">Unity</h2>
       <ul>
         <li>Download and install Unity3d 2021.3.15f1</li>
-        <img width="600px" src="./unityversion.png"/>
+        <img width="600px" src="./images/unityversion.png"/>
         <ul>
       	   <li>Include the "WebGL" package</li>
            <li>Use Visual Studio (rather than Visual Studio Code)</li>
@@ -103,39 +103,20 @@
       <h2 class="mt-6">Modifying your .gitignore file</h2>
       The gitignore file allows you to specify files that you do not want git to track (and submit to github). Unity creates tons of files that you don't need to save (and actually cannot put on github because they are too big). The following instructions make it so we don't upload unnecessary files to github, and thus won't use up all the space we are given for free.
       <ul>
+        <li>To get your .gitignore file, you can either have GitHub Desktop generate it for you when you create your respository (be sure to select "Unity" from the dropdown menu), or you can create a plain text file, name it ".gitignore" and copy <a href="https://raw.githubusercontent.com/github/gitignore/main/Unity.gitignore">all the text from this</a> into your file.</li>
+        <li>Place the gitignore file inside of the Unity project you created. In other words, you want the .gitignore file to be in the same folder as the "Assets" folder (not inside the assets folder though). See the image below.</li>
         <li>On your computer, open up the .gitignore file in a plain text editor</li>
         <li>NOTE: The gitignore file is "hidden" which means that your operating system won't show it. Google how to make hidden files visible on your machine permanently, and you will be able to see it in the folder.</li>
         <li>Delete the lines that say the following:
   <pre>
     [Bb]uild/
     [Bb]uilds/
-  </pre></li>
-        <li>Also, at the bottom of the file delete the lines that say:
-  <pre>
-    # Builds
-    *.apk
-    *.unitypackage
-  </pre></li>
-  <li>Finally, erase the leading "/" in front of:
-    <pre>
-      /[Ll]ibrary/
-      /[Tt]emp/
-      /[Oo]bj/
-      /[Ll]ogs/
-      /[Uu]ser[Ss]ettings/
-    </pre>
-    So it should look like:
-    <pre>
-      [Ll]ibrary/
-      [Tt]emp/
-      [Oo]bj/
-      [Ll]ogs/
-      [Uu]ser[Ss]ettings/
-    </pre>
-  </li>
+  </pre>
+        </li>
         <li>Save the file</li>
         <li>Finally, open Github Desktop, commit your changes.</li>
       </ul>
+      <img width="400px" src="./images/gitignore.png" alt="Where to put the gitignore file">
     </div>
     <div class="container pb-5">
       <h3 class="mt-6">Preparing your Unity project for Github</h3>
