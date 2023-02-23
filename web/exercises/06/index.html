@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The course website for GAME 615 - Game Development at American University in 2023.">
+    <meta name="author" content="Mike Treanor">
+    <title>GAME 615 - Game Development - American University</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">GAME 615 - Game Development</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../../index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#examples">Examples</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#exercises">Exercises</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#syllabus">Syllabus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    <!-- CONTENT -->
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Exercise 6: Race to Collect!</h1>
+          <p class="lead">GAME 615 - American University</p>
+      </div>
+    </div>
+    <div class="container pb-5">
+      <h1 id="description">Description</h1>
+<!--PASTE HERE START--> 
+
+
+<h2 id="description">Description</h2>
+<p>For this assignment, you will implement a &quot;race to collect something&quot; between the player and an army of &quot;enemies&quot;. On the screen should be at least two numbers: one for the number of items that the player has collected, and one for the number of items the enemies have collected. When all items have been collected, something should happen based on whether the player or the enemies have collected more items. It is up to you how you want the player to move (i.e. feel free to use the Unity starter assets, or the point and click method I demonstrate in the 2-22-23 example).</p>
+<p>The main two new concepts that you will need to explore are:</p>
+<ol>
+<li>Using a &quot;GameManager&quot; script to centralize global variables (such as playerScore and enemeyScore) and update UI elements.</li>
+<li>Having external scripts update those variables.</li>
+<li>Using Unity&#39;s NavMesh Navigation AI system to control enemy movement</li>
+</ol>
+<p>To create the Enemy behavior, you can make use of EnemyScript.cs located in the example project for 2-22-23. Any GameObject with that script and a NavMeshAgent component will choose a random location periodocally on the NavMesh and move there. You will need to make it so the enemy will &quot;collect&quot; the collectable items and update the GameManager (and the UI) accordingly. If you need review of how to do that, see the PlayerController.cs file in the 2-22-23 example.</p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Two numbers are displayed on the screen (one for how many collectables the player has gotten and one for the enemies)</li>
+<li>At least 15 (maybe much more!) enemies that randomly wander the world (again, see the EnemeyScript.cs file)</li>
+<li>When the enemies or the player collides with the collectables their number should increase</li>
+<li>When all items are collected, something different should happen depending on whether the player or the enemies have collected more items (e.g. display &quot;You Win&quot; or lose, or spawn a particle effect, or something interesting)</li>
+<li>The pivot point for both the player and the enemies needs to be at their feet</li>
+<li>The Enemy should be a 3d model from <a href="poly.pizza">poly.pizza</a> and it needs to face the right direction when the NavMeshAgent moves it around. In other words, you may need to make the 3d model be a child of an empty game object, and then you will need to rotate the 3d model so that it&#39;s forward matches the forward of the parent object (the forward of a game object is representeed by the blue arrow when the translate tool is selected in &quot;local&quot; mode)</li>
+</ul>
+
+
+
+<!--PASTE HERE END-->
+<!-- 
+START MARKDOWN DESCRIPTION
+
+## Description
+For this assignment, you will implement a "race to collect something" between the player and an army of "enemies". On the screen should be at least two numbers: one for the number of items that the player has collected, and one for the number of items the enemies have collected. When all items have been collected, something should happen based on whether the player or the enemies have collected more items. It is up to you how you want the player to move (i.e. feel free to use the Unity starter assets, or the point and click method I demonstrate in the 2-22-23 example).
+
+The main two new concepts that you will need to explore are:
+
+1. Using a "GameManager" script to centralize global variables (such as playerScore and enemeyScore) and update UI elements.
+1. Having external scripts update those variables.
+1. Using Unity's NavMesh Navigation AI system to control enemy movement
+
+To create the Enemy behavior, you can make use of EnemyScript.cs located in the example project for 2-22-23. Any GameObject with that script and a NavMeshAgent component will choose a random location periodocally on the NavMesh and move there. You will need to make it so the enemy will "collect" the collectable items and update the GameManager (and the UI) accordingly. If you need review of how to do that, see the PlayerController.cs file in the 2-22-23 example.
+
+### Requirements
+* Two numbers are displayed on the screen (one for how many collectables the player has gotten and one for the enemies)
+* At least 15 (maybe much more!) enemies that randomly wander the world (again, see the EnemeyScript.cs file)
+* When the enemies or the player collides with the collectables their number should increase
+* When all items are collected, something different should happen depending on whether the player or the enemies have collected more items (e.g. display "You Win" or lose, or spawn a particle effect, or something interesting)
+* The pivot point for both the player and the enemies needs to be at their feet
+* The Enemy should be a 3d model from [poly.pizza](poly.pizza) and it needs to face the right direction when the NavMeshAgent moves it around. In other words, you may need to make the 3d model be a child of an empty game object, and then you will need to rotate the 3d model so that it's forward matches the forward of the parent object (the forward of a game object is representeed by the blue arrow when the translate tool is selected in "local" mode)
+
+END MARKDOWN DESCRIPTION
+-->
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Configuring your project</h2>
+      <p>Name your repository "game615-spring2023-06"</p>
+      <p>Make sure to <a href="../../setup.html">set your Unity and Github projects correctly.</a> <b>BE EXTRA REALLY SUPER CERTAIN THAT YOUR GITIGNORE FILE IS CONFIGURED CORRECTLY AND PLACED IN YOUR UNITY PROJECT FOLDER (the same one as assets)</b></p>
+    </div>
+
+
+    <div class="container pb-5">
+      <h2 class="mt-6">Building your Project for the Web</h2>
+      <p>
+        <ul>
+          <li>Open the Build Settings (File > Build Settings...)</li>
+          <li>Click the Add Open Scenes button</li>
+          <li>Select "WebGL" and then click the "Switch Platform" button</li>
+          <li>Remember to <a href="../../setup.html">modify your player settings</a> (disable compression, turn off auto WebGL graphics or whatever if necessary.)</li>
+          <li>Click the "Build" button</li>
+          <li>
+            When it asks you where you want to put your build, create a folder titled "play" in your main repository folder ("game615-spring2023-06").
+            Once you do this, it will take several minutes to build your game, and then you can commit and push your build. After five or so minutes it should be playable at:
+
+            http://YOUR_GITHUB_USERNAME.github.io/game615-spring2023-06/play
+          </li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="container pb-5">
+      <h2 class="mt-6">Submission</h2>
+      <p>
+        Turn in this assignment via your properly named GitHub repository. <b>Each submission must be accompanied by a README.md file</b> that contains your name, the name of your collaborators, and a <a href="https://anvilproject.org/guides/content/creating-links">link to a playable version of your game</a> (i.e. a WebGL build). Also include any other information you think may be relevant (e.g. how to play if it isn't obvious).
+      </p>
+      <p>
+        Also, as part of your submission process, you must complete <a href="https://forms.gle/gB3P7C6hzg5f9n3k8">this form</a>. In the form there is a place to link your repository - this is where I will look to see your submission.
+      </p>
+    </div>
+    <div class="container pb-5">
+      <h2 class="mt-6">Sample Code</h2>
+      <a href="https://github.com/mtreanor/game615-spring2023/tree/master/examples/2-15-23" class="btn btn-primary">CODE</a>
+      <a href="http://mtreanor.com/game615-spring2023/examples/2-15-23/play/" class="btn btn-primary">PLAY</a>
+    </div>
+  </body>
+</html>
