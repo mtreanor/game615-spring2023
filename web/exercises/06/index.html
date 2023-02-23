@@ -55,7 +55,6 @@
       <h1 id="description">Description</h1>
 <!--PASTE HERE START--> 
 
-
 <h2 id="description">Description</h2>
 <p>For this assignment, you will implement a &quot;race to collect something&quot; between the player and an army of &quot;enemies&quot;. On the screen should be at least two numbers: one for the number of items that the player has collected, and one for the number of items the enemies have collected. When all items have been collected, something should happen based on whether the player or the enemies have collected more items. It is up to you how you want the player to move (i.e. feel free to use the Unity starter assets, or the point and click method I demonstrate in the 2-22-23 example).</p>
 <p>The main two new concepts that you will need to explore are:</p>
@@ -64,7 +63,7 @@
 <li>Having external scripts update those variables.</li>
 <li>Using Unity&#39;s NavMesh Navigation AI system to control enemy movement</li>
 </ol>
-<p>To create the Enemy behavior, you can make use of EnemyScript.cs located in the example project for 2-22-23. Any GameObject with that script and a NavMeshAgent component will choose a random location periodocally on the NavMesh and move there. You will need to make it so the enemy will &quot;collect&quot; the collectable items and update the GameManager (and the UI) accordingly. If you need review of how to do that, see the PlayerController.cs file in the 2-22-23 example.</p>
+<p>To create the Enemy behavior, you can make use of <a href="https://github.com/mtreanor/game615-spring2023/blob/main/examples/2-22-23/Assets/Scripts/EnemyController.cs">EnemyScript.cs</a> located in the example project for 2-22-23. Any GameObject with that script and a NavMeshAgent component will choose a random location periodocally on the NavMesh and move there. You will need to make it so the enemy will &quot;collect&quot; the collectable items and update the GameManager (and the UI) accordingly. If you need review of how to do that, see the <a href="https://github.com/mtreanor/game615-spring2023/blob/main/examples/2-22-23/Assets/Scripts/PlayerController.cs">PlayerController.cs</a> file in the 2-22-23 example.</p>
 <h3 id="requirements">Requirements</h3>
 <ul>
 <li>Two numbers are displayed on the screen (one for how many collectables the player has gotten and one for the enemies)</li>
@@ -72,9 +71,8 @@
 <li>When the enemies or the player collides with the collectables their number should increase</li>
 <li>When all items are collected, something different should happen depending on whether the player or the enemies have collected more items (e.g. display &quot;You Win&quot; or lose, or spawn a particle effect, or something interesting)</li>
 <li>The pivot point for both the player and the enemies needs to be at their feet</li>
-<li>The Enemy should be a 3d model from <a href="poly.pizza">poly.pizza</a> and it needs to face the right direction when the NavMeshAgent moves it around. In other words, you may need to make the 3d model be a child of an empty game object, and then you will need to rotate the 3d model so that it&#39;s forward matches the forward of the parent object (the forward of a game object is representeed by the blue arrow when the translate tool is selected in &quot;local&quot; mode)</li>
+<li>The Enemy should be a 3d model from <a href="http://poly.pizza">poly.pizza</a> and it needs to face the right direction when the NavMeshAgent moves it around. In other words, you may need to make the 3d model be a child of an empty game object, and then you will need to rotate the 3d model so that it&#39;s forward matches the forward of the parent object (the forward of a game object is representeed by the blue arrow when the translate tool is selected in &quot;local&quot; mode)</li>
 </ul>
-
 
 
 <!--PASTE HERE END-->
@@ -90,7 +88,7 @@ The main two new concepts that you will need to explore are:
 1. Having external scripts update those variables.
 1. Using Unity's NavMesh Navigation AI system to control enemy movement
 
-To create the Enemy behavior, you can make use of EnemyScript.cs located in the example project for 2-22-23. Any GameObject with that script and a NavMeshAgent component will choose a random location periodocally on the NavMesh and move there. You will need to make it so the enemy will "collect" the collectable items and update the GameManager (and the UI) accordingly. If you need review of how to do that, see the PlayerController.cs file in the 2-22-23 example.
+To create the Enemy behavior, you can make use of [EnemyScript.cs](https://github.com/mtreanor/game615-spring2023/blob/main/examples/2-22-23/Assets/Scripts/EnemyController.cs) located in the example project for 2-22-23. Any GameObject with that script and a NavMeshAgent component will choose a random location periodocally on the NavMesh and move there. You will need to make it so the enemy will "collect" the collectable items and update the GameManager (and the UI) accordingly. If you need review of how to do that, see the [PlayerController.cs](https://github.com/mtreanor/game615-spring2023/blob/main/examples/2-22-23/Assets/Scripts/PlayerController.cs) file in the 2-22-23 example.
 
 ### Requirements
 * Two numbers are displayed on the screen (one for how many collectables the player has gotten and one for the enemies)
@@ -98,7 +96,7 @@ To create the Enemy behavior, you can make use of EnemyScript.cs located in the 
 * When the enemies or the player collides with the collectables their number should increase
 * When all items are collected, something different should happen depending on whether the player or the enemies have collected more items (e.g. display "You Win" or lose, or spawn a particle effect, or something interesting)
 * The pivot point for both the player and the enemies needs to be at their feet
-* The Enemy should be a 3d model from [poly.pizza](poly.pizza) and it needs to face the right direction when the NavMeshAgent moves it around. In other words, you may need to make the 3d model be a child of an empty game object, and then you will need to rotate the 3d model so that it's forward matches the forward of the parent object (the forward of a game object is representeed by the blue arrow when the translate tool is selected in "local" mode)
+* The Enemy should be a 3d model from [poly.pizza](http://poly.pizza) and it needs to face the right direction when the NavMeshAgent moves it around. In other words, you may need to make the 3d model be a child of an empty game object, and then you will need to rotate the 3d model so that it's forward matches the forward of the parent object (the forward of a game object is representeed by the blue arrow when the translate tool is selected in "local" mode)
 
 END MARKDOWN DESCRIPTION
 -->
