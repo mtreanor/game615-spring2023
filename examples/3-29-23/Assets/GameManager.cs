@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,15 @@ public class GameManager : MonoBehaviour
     public TMP_Text nameText;
 
     public Animator namePanelAnimator;
+
+    public Sprite dogPaw;
+    public Sprite catPaw;
+
+    public Image pawImage;
+
+    public Image manaMeterImage;
+
+    public Transform manaMeterTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -36,5 +46,29 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SelectUnit(UnitScript unit)
+    {
+        if (selectedUnit == null)
+        {
+            namePanelAnimator.SetTrigger("fadeIn");
+        }
+
+        selectedUnit = unit;
+        nameText.text = unit.unitName;
+        if (unit.isCat)
+        {
+            pawImage.sprite = catPaw;
+        }
+        else
+        {
+            pawImage.sprite = dogPaw;
+        }
+
+        manaMeterImage.fillAmount = unit.manaAmount / unit.maxMana;
+
+        Vector3 pos = unit.transform.position + Vector3.up * 2.5f;
+        manaMeterTransform.position = Camera.main.WorldToScreenPoint(pos);
     }
 }

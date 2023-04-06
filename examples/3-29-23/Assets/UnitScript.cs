@@ -6,10 +6,15 @@ public class UnitScript : MonoBehaviour
 {
     public string unitName;
 
+    public bool isCat;
+
     public Renderer bodyRend;
     public Color hoverColor;
     public Color selectedColor;
     public Color defaultColor;
+
+    public float manaAmount;
+    public float maxMana = 100f;
 
     public bool selected = false;
 
@@ -32,6 +37,12 @@ public class UnitScript : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        gm.manaMeterImage.fillAmount = manaAmount / maxMana;
+        Vector3 pos = transform.position + Vector3.up * 2.5f;
+        gm.manaMeterTransform.position = Camera.main.WorldToScreenPoint(pos);
+        gm.manaMeterTransform.gameObject.SetActive(true);
+
+
         if (selected == false)
         {
             bodyRend.material.color = hoverColor;
@@ -40,6 +51,7 @@ public class UnitScript : MonoBehaviour
 
     private void OnMouseExit()
     {
+        gm.manaMeterTransform.gameObject.SetActive(false);
         if (selected == false)
         {
             bodyRend.material.color = defaultColor;
@@ -52,19 +64,13 @@ public class UnitScript : MonoBehaviour
         {
             // if we're here, something was already selected!
             // 1. Deselect it
-            gm.selectedUnit.selected = false;
+            this.gm.selectedUnit.selected = false;
             gm.selectedUnit.bodyRend.material.color = gm.selectedUnit.defaultColor;
         }
         // 2. Select me!
         selected = true;
         bodyRend.material.color = selectedColor;
 
-        if (gm.selectedUnit == null)
-        {
-            gm.namePanelAnimator.SetTrigger("fadeIn");
-        }
-
-        gm.selectedUnit = this;
-        gm.nameText.text = unitName;
+        gm.SelectUnit(this);
     }
 }
