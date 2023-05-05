@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class UnitScript : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class UnitScript : MonoBehaviour
 
     public bool selected = false;
 
+    public NavMeshAgent nma;
+
     GameManager gm;
 
     // Start is called before the first frame update
@@ -27,6 +30,8 @@ public class UnitScript : MonoBehaviour
 
         GameObject gmObj = GameObject.Find("GameManagerObject");
         gm = gmObj.GetComponent<GameManager>();
+
+        nma = gameObject.GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame

@@ -33,8 +33,10 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(ray) == false)
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit) == false)
             {
+
                 if (selectedUnit != null)
                 {
                     selectedUnit.selected = false;
@@ -45,6 +47,13 @@ public class GameManager : MonoBehaviour
                     namePanelAnimator.SetTrigger("fadeOut");
                 }
             }
+            else
+            {
+                if (selectedUnit != null) {
+                    selectedUnit.nma.SetDestination(hit.point);
+                }
+            }
+
         }
     }
 

@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7087758941465104114}
   - component: {fileID: 7087758941465104115}
   - component: {fileID: 7087758941465104112}
+  - component: {fileID: 7313239892132186074}
   m_Layer: 6
   m_Name: Unit
   m_TagString: Untagged
@@ -145,10 +146,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e016e4808cca54fdb85e8630e07d17fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitName: 
+  isCat: 0
   bodyRend: {fileID: 7087758941707060610}
   hoverColor: {r: 0.9433962, g: 0.92327577, b: 0.3960484, a: 1}
   selectedColor: {r: 1, g: 0.514151, b: 0.514151, a: 0}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  manaAmount: 0
+  maxMana: 100
   selected: 0
+--- !u!195 &7313239892132186074
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7087758941465104113}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7087758941560053928
 GameObject:
   m_ObjectHideFlags: 0
